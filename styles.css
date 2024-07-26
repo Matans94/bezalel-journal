@@ -1,0 +1,26 @@
+/* Meir's Classic CSS Reset */
+
+*, *:before, *:after {
+    box-sizing: border-box; /* Prevent padding from enlarging elements */
+}
+
+* {
+    margin: 0; /* Remove extra margin from everything (body, headings, etc...) */
+}
+
+img {
+    max-width: 100%; /* Don't let images be more than their container's width */
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word; /* Break long words in headings & paragraphs */
+}
+
+ul { /* Don't style unordered lists (good for nav menus!) */
+    padding: 0;
+    list-style: none;
+}
+
+a { /* No blue links! */
+    color: inherit;
+}
