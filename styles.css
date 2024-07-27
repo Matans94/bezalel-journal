@@ -24,3 +24,137 @@ ul { /* Don't style unordered lists (good for nav menus!) */
 a { /* No blue links! */
     color: inherit;
 }
+
+
+/*Fonts */
+
+@import url("https://use.typekit.net/wkm8isv.css");
+
+@font-face {
+    font-family: HaimG-bold;
+    font-weight: 600;
+    src: url("fonts/HaimG-Bold.02a371aea27ccf3fee1c7357c5889b2e.woff") format("woff2");
+}
+
+@font-face {
+    font-family: HaimG-bold-soft;
+    font-weight: 600;
+    src: url("fonts/HaimG-BoldSoft.f635c97528f174abb2789f4c9d57e34d.woff2") format("woff2");
+}
+
+
+@font-face {
+    font-family: HaimG-condensed;
+    /*font-weight: 400;*/
+    src: url("fonts/HaimG-Condensed.3e20bfa02dcddb5c16c16e9a845ec71d.woff") format("woff2");
+}
+
+
+@font-face {
+    font-family: HaimG-regular;
+    font-weight: 400;
+    src: url("fonts/HaimG-Regular.53878e88f76c547146dc518c566b6ca6.woff") format("woff2");
+}
+
+
+@font-face {
+    font-family: HaimG-regular-soft;
+    font-weight: 400;
+    src: url("fonts/HaimG-RegularSoft.baa115ee3c55174f927596833ab02e27.woff2") format("woff2");
+}
+
+
+@font-face {
+    font-family: FranG-black;
+    font-weight: 700;
+    src: url("fonts/FrankG-Black.bbbc08877a5f436979faf400bc2a3cde.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: FranG-bold;
+    font-weight: 600;
+    src: url("fonts/FrankG-Bold.8bf3019383ba81cfc11657c5c72fd364.woff2") format("woff2");
+}
+@font-face {
+    font-family: FranG-regular;
+    font-weight: 800;
+    src: url("fonts/FrankG-Regular.46d5849c6340b5d0f17e19876034fa1e.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: didone-big;
+    /*font-weight: 600;*/
+    src: url("fonts/didone-bigtext-webfont.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: didone-display;
+    /*font-weight: 500;*/
+    src: url("fonts/didone-display-webfont.woff2") format("woff2");
+}
+@font-face {
+    font-family: didone-inter;
+    /*font-weight: 400;*/
+    src: url("fonts/didone-interpolation50-webfont.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: didone-subheader;
+    /*font-weight: 400;*/
+    src: url("fonts/didone-subheader-webfont.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: didone-text;
+    /*font-weight: 400;*/
+    src: url("fonts/didone-text-webfont.woff2") format("woff2");
+}
+
+
+
+/*header component*/
+
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5vh;
+}
+
+.bezalel-logo{
+    width: 5vw;
+}
+
+.bezalel-header{
+    font-family: HaimG-condensed, sans-serif;
+    font-size: min(20px, 3vw);
+    margin-top: 3vh;
+    letter-spacing: 0.04rem;
+}
+
+.journal-header{
+    font-family: didone-text, serif;
+    font-size: 64px;
+    margin-top: 6vh ;
+    text-align: center;
+}
+
+.no-wrap{
+    text-wrap: nowrap;
+}
+
+.small-explain h4{
+    font-family: FranG-regular, serif;
+    font-size: 24px;
+    align-self: center;
+    align-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+p{
+    font-family: owners-xxnarrow, sans-serif;
+    font-size: 50px;
+}
