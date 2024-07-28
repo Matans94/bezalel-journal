@@ -113,7 +113,20 @@ a { /* No blue links! */
 
 
 /*header component*/
+body{
+    height: 100vh;
+    margin: 0 8vw ;
 
+    /*position: relative;*/
+}
+
+.wrapper{
+    /*position: relative;*/
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-around;
+}
 .header{
     display: flex;
     flex-direction: column;
@@ -127,16 +140,17 @@ a { /* No blue links! */
 
 .bezalel-header{
     font-family: HaimG-condensed, sans-serif;
-    font-size: min(20px, 3vw);
+    font-size: min(24px, 3vw);
     margin-top: 3vh;
     letter-spacing: 0.04rem;
 }
 
 .journal-header{
     font-family: didone-text, serif;
-    font-size: 64px;
-    margin-top: 6vh ;
+    font-size: 6vw;
+    margin-top: 4vh ;
     text-align: center;
+    letter-spacing: -0.25rem;
 }
 
 .no-wrap{
@@ -144,7 +158,7 @@ a { /* No blue links! */
 }
 
 .small-explain{
-    margin-top: 2vh;
+    margin-top: 0vh;
 }
 
 .small-explain h4{
@@ -161,7 +175,8 @@ a { /* No blue links! */
     font-family: HaimG-condensed, sans-serif;
     display: flex;
     flex-direction: column;
-    margin-top: 5vh;
+    margin-top: 0vh;
+    position: relative;
 }
 
 .issue-ten{
@@ -169,6 +184,7 @@ a { /* No blue links! */
     align-items: baseline;
     justify-content: center;
     position: relative;
+    margin-bottom: 6vh;
 }
 
 .issue-ten h2{
@@ -178,7 +194,7 @@ a { /* No blue links! */
 span.small-comment{
     position: absolute;
     left: 0;
-    margin-left: 24vw;
+    margin-left: 12vw;
     align-content: baseline;
     font-size: max(24px, 3vw);
     bottom: 1.5vh;
@@ -192,10 +208,9 @@ a{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 6vh;
     font-size: 42px;
     text-decoration-thickness: 2px;
-    text-decoration-line: underline;
+    /*text-decoration-line: underline;*/
     gap: 2vh;
 }
 
@@ -204,7 +219,89 @@ a{
     gap: 4vw;
 }
 
-p{
-    font-family: owners-xxnarrow, sans-serif;
-    font-size: 50px;
+
+.main-past-journals{
+    position: absolute;
+    top: 8vh;
+    font-size:52px;
+    line-height: 7vh;
+}
+
+.float-open-call{
+    position: absolute;
+    top: 16vh;
+    font-size:24px;
+    /*line-height: 7vh;*/
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
+    border: black 2.5px solid;
+    font-size: 20px;
+}
+
+.open-call-heb{
+    font-family: FranG-regular, serif;
+}
+
+.open-call-en{
+    font-family: owners, sans-serif;
+    font-weight: 300;
+}
+
+.main-page-line{
+    width: 100%;
+    background-color: black;
+    height: 4px;
+    margin-top: 2vh;
+}
+
+.main-footer{
+    display: flex;
+    font-family: FranG-regular, serif;
+    justify-content: space-between;
+    /*margin-top: 2vh;*/
+    margin-bottom: 2vh;
+    /*position: absolute;*/
+}
+
+p.footer-mail{
+    font-family: owners-xnarrow, sans-serif;
+    font-size: 36px;
+}
+
+.credits{
+    display: flex;
+    gap: 32px;
+    font-size: 20px;
+}
+
+.editor{
+    text-wrap: nowrap;
+}
+
+.editor span{
+    font-family: FranG-bold, serif;
+    text-wrap: nowrap;
+}
+
+.credits-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: baseline;
+}
+
+.credits-list li{
+    text-wrap: nowrap;
+    padding-left: 12px;
+}
+
+.credits-list li::after{
+    content: ", ";
+}
+
+.credits-list li:last-child::after{
+    content: ".";
 }
