@@ -122,7 +122,7 @@ a { /* No blue links! */
 }
 
 .bezalel-logo{
-    width: 5vw;
+    width: min(12vw, 60px);
 }
 
 .bezalel-header{
@@ -143,9 +143,13 @@ a { /* No blue links! */
     text-wrap: nowrap;
 }
 
+.small-explain{
+    margin-top: 2vh;
+}
+
 .small-explain h4{
     font-family: FranG-regular, serif;
-    font-size: 24px;
+    font-size: 20px;
     align-self: center;
     align-content: center;
     display: flex;
@@ -153,6 +157,52 @@ a { /* No blue links! */
     justify-content: center;
 }
 
+.main-content{
+    font-family: HaimG-condensed, sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5vh;
+}
+
+.issue-ten{
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    position: relative;
+}
+
+.issue-ten h2{
+    font-size: min(12vw, 96px);
+}
+
+span.small-comment{
+    position: absolute;
+    left: 0;
+    margin-left: 24vw;
+    align-content: baseline;
+    font-size: max(24px, 3vw);
+    bottom: 1.5vh;
+}
+
+a{
+    text-decoration: none;
+}
+
+.main-nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 6vh;
+    font-size: 42px;
+    text-decoration-thickness: 2px;
+    text-decoration-line: underline;
+    gap: 2vh;
+}
+
+.main-nav-one-line{
+    display: flex;
+    gap: 4vw;
+}
 
 p{
     font-family: owners-xxnarrow, sans-serif;
