@@ -1,0 +1,308 @@
+/* Meir's Classic CSS Reset */
+
+*, *:before, *:after {
+    box-sizing: border-box; /* Prevent padding from enlarging elements */
+}
+
+* {
+    margin: 0; /* Remove extra margin from everything (body, headings, etc...) */
+}
+
+img {
+    max-width: 100%; /* Don't let images be more than their container's width */
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word; /* Break long words in headings & paragraphs */
+}
+
+ul { /* Don't style unordered lists (good for nav menus!) */
+    padding: 0;
+    list-style: none;
+}
+
+a { /* No blue links! */
+    color: inherit;
+}
+
+
+/*Fonts */
+
+@import url("https://use.typekit.net/wkm8isv.css");
+
+@font-face {
+    font-family: HaimG-bold;
+    font-weight: 600;
+    src: url("fonts/HaimG-Bold.02a371aea27ccf3fee1c7357c5889b2e.woff") format("woff2");
+}
+
+@font-face {
+    font-family: HaimG-bold-soft;
+    font-weight: 600;
+    src: url("fonts/HaimG-BoldSoft.f635c97528f174abb2789f4c9d57e34d.woff2") format("woff2");
+}
+
+
+@font-face {
+    font-family: HaimG-condensed;
+    /*font-weight: 400;*/
+    src: url("fonts/HaimG-Condensed.3e20bfa02dcddb5c16c16e9a845ec71d.woff") format("woff2");
+}
+
+
+@font-face {
+    font-family: HaimG-regular;
+    font-weight: 400;
+    src: url("fonts/HaimG-Regular.53878e88f76c547146dc518c566b6ca6.woff") format("woff2");
+}
+
+
+@font-face {
+    font-family: HaimG-regular-soft;
+    font-weight: 400;
+    src: url("fonts/HaimG-RegularSoft.baa115ee3c55174f927596833ab02e27.woff2") format("woff2");
+}
+
+
+@font-face {
+    font-family: FranG-black;
+    font-weight: 700;
+    src: url("fonts/FrankG-Black.bbbc08877a5f436979faf400bc2a3cde.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: FranG-bold;
+    font-weight: 600;
+    src: url("fonts/FrankG-Bold.8bf3019383ba81cfc11657c5c72fd364.woff2") format("woff2");
+}
+@font-face {
+    font-family: FranG-regular;
+    font-weight: 800;
+    src: url("fonts/FrankG-Regular.46d5849c6340b5d0f17e19876034fa1e.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: didone-big;
+    /*font-weight: 600;*/
+    src: url("fonts/didone-bigtext-webfont.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: didone-display;
+    /*font-weight: 500;*/
+    src: url("fonts/didone-display-webfont.woff2") format("woff2");
+}
+@font-face {
+    font-family: didone-inter;
+    /*font-weight: 400;*/
+    src: url("fonts/didone-interpolation50-webfont.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: didone-subheader;
+    /*font-weight: 400;*/
+    src: url("fonts/didone-subheader-webfont.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: didone-text;
+    /*font-weight: 400;*/
+    src: url("fonts/didone-text-webfont.woff2") format("woff2");
+}
+
+
+
+/*header component*/
+body{
+    height: 100vh;
+    margin: 0 8vw ;
+
+    /*position: relative;*/
+}
+
+.wrapper{
+    /*position: relative;*/
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-around;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5vh;
+}
+
+.bezalel-logo{
+    width: min(12vw, 60px);
+}
+
+.bezalel-header{
+    font-family: HaimG-condensed, sans-serif;
+    font-size: min(24px, 3vw);
+    margin-top: 3vh;
+    letter-spacing: 0.04rem;
+}
+
+.journal-header{
+    font-family: didone-text, serif;
+    font-size: 6vw;
+    margin-top: 4vh ;
+    text-align: center;
+    letter-spacing: -0.25rem;
+}
+
+.no-wrap{
+    text-wrap: nowrap;
+}
+
+.small-explain{
+    margin-top: 0vh;
+}
+
+.small-explain h4{
+    font-family: FranG-regular, serif;
+    font-size: 20px;
+    align-self: center;
+    align-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-content{
+    font-family: HaimG-condensed, sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0vh;
+    position: relative;
+}
+
+.issue-ten{
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 6vh;
+}
+
+.issue-ten h2{
+    font-size: min(12vw, 96px);
+}
+
+span.small-comment{
+    position: absolute;
+    left: 0;
+    margin-left: 12vw;
+    align-content: baseline;
+    font-size: max(24px, 3vw);
+    bottom: 1.5vh;
+}
+
+a{
+    text-decoration: none;
+}
+
+.main-nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 42px;
+    text-decoration-thickness: 2px;
+    /*text-decoration-line: underline;*/
+    gap: 2vh;
+}
+
+.main-nav-one-line{
+    display: flex;
+    gap: 4vw;
+}
+
+
+.main-past-journals{
+    position: absolute;
+    top: 8vh;
+    font-size:52px;
+    line-height: 7vh;
+}
+
+.float-open-call{
+    position: absolute;
+    top: 16vh;
+    font-size:24px;
+    /*line-height: 7vh;*/
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
+    border: black 2.5px solid;
+    font-size: 20px;
+}
+
+.open-call-heb{
+    font-family: FranG-regular, serif;
+}
+
+.open-call-en{
+    font-family: owners, sans-serif;
+    font-weight: 300;
+}
+
+.main-page-line{
+    width: 100%;
+    background-color: black;
+    height: 4px;
+    margin-top: 2vh;
+}
+
+.main-footer{
+    display: flex;
+    font-family: FranG-regular, serif;
+    justify-content: space-between;
+    /*margin-top: 2vh;*/
+    margin-bottom: 2vh;
+    /*position: absolute;*/
+}
+
+p.footer-mail{
+    font-family: owners-xnarrow, sans-serif;
+    font-size: 36px;
+}
+
+.credits{
+    display: flex;
+    gap: 32px;
+    font-size: 20px;
+}
+
+.editor{
+    text-wrap: nowrap;
+}
+
+.editor span{
+    font-family: FranG-bold, serif;
+    text-wrap: nowrap;
+}
+
+.credits-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: baseline;
+}
+
+.credits-list li{
+    text-wrap: nowrap;
+    padding-left: 12px;
+}
+
+.credits-list li::after{
+    content: ", ";
+}
+
+.credits-list li:last-child::after{
+    content: ".";
+}
