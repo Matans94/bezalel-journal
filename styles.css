@@ -96,9 +96,66 @@ a { /* No blue links! */
 }
 
 .nav-div{
-    display: flex;
-    align-items: center;
+    display: inline-flex;
+    align-items: baseline;
+    /*justify-content: center;*/
+    gap: 10px;
+    /*position: fixed;*/
+    top: 0;
+
+    /*background-color: #f0f0f0;*/
+    padding: 10px;
+    /*overflow: hidden;*/
+    text-wrap: nowrap;
 }
+
+.current-section-div{
+
+    position: relative;
+    /*overflow-y: hidden;*/
+    overflow-x: visible;
+    text-wrap: nowrap;
+    width: 20vw;
+}
+
+#sections-dropdown {
+    /*display: none;*/
+    left: 0;
+    position: absolute;
+    top:  100%;
+    /*7vh; !* Adjust as needed *!*/
+    background-color: white;
+    /*border: 1px solid #ccc;*/
+    /*box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);*/
+    z-index: 1000;
+    width: 100%;
+}
+
+/*#sections-dropdown ul {*/
+/*    list-style: none;*/
+/*    margin: 0;*/
+/*}*/
+
+#sections-dropdown li {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#sections-dropdown li:hover {
+    background-color: #f0f0f0;
+}
+
+section {
+    /*padding: 100px 20px;*/
+    border: 1px solid #ccc;
+    /*margin: 20px 0;*/
+}
+
+
+
+
+
+
 
 .intro-section{
     display: flex;
@@ -199,9 +256,11 @@ h5{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 20vh;
 }
 
 h2.assay-name {
+    margin-top: 1vh;
     font-family: HaimG-condensed, sans-serif;
     font-size: 10vw;
     letter-spacing: 0.4vw;
@@ -223,4 +282,21 @@ h3.assay-author {
     width: 60vw;
      text-align: justify;
      line-height: min(36px, 4vw);
+}
+
+  .note {
+     font-size: min(16px, 2vw);
+ }
+
+  .quotation{
+      font-family: didone-inter, serif;
+  }
+
+  .author-name{
+      font-family: HaimG-condensed, sans-serif;
+      text-wrap: nowrap;
+  }
+
+.content-1 h4{
+    font-size: min(32px, 4vw);
 }
