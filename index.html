@@ -14,21 +14,35 @@
 </head>
 <body>
 <div class="header">
-    <div class="nav-button">
-        <div class="nav-rec"></div>
-        <div class="nav-rec"></div>
+    <div class="nav-button-div">
+        <div class="nav-button">
+            <div class="nav-rec"></div>
+            <div class="nav-rec"></div>
+            <div class="nav-rec"></div>
+        </div>
+    </div>
+
+
+    <div id="sliding-window" class="hidden">
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="#section1">Section 1</a></li>
+            <li><a href="#section2">Section 2</a></li>
+            <li><a href="#section3">Section 3</a></li>
+        </ul>
     </div>
 
     <div class="bezalel-type">
         <img alt="bezalel-logo" class="bezalel-logo"
              src="images/bezalel-logo.png">
-        <p>בצלאל אקדמיה לאומנות ועיצוב ירושלים</p>
+<!--        <div class="wrap-hide">בצלאל אקדמיה לאומנות ועיצוב ירושלים</div>-->
     </div>
 
     <div class="nav-div">
         |
         <div class="current-section-div">
-            <p id="current-section">גליון עשר</p>
+            <p id="current-section">תוכן עניינים</p>
+
             <div id="sections-dropdown">
                 <ul>
                     <li data-section="section1">Section 1</li>
@@ -39,6 +53,7 @@
 
         </div>
         |
+        <span id="completion-percentage">0%</span>
         <div id="progress-bar"></div>
         |
     </div>
@@ -733,5 +748,6 @@
 </div>
 
 <script src="navigation-bar.js"></script>
+<script src="nav-btn.js" defer></script>
 </body>
 </html>

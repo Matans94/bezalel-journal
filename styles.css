@@ -51,26 +51,46 @@ a { /* No blue links! */
     position: sticky;
     top: 0;
     /*right: 0;*/
-    display: flex;
+    display: inline-flex;
     justify-content: space-between;
-    /*margin-top: 2vh;*/
+    align-items: center;
     font-family: didone-inter, serif;
     font-size: 16px;
-    padding-bottom: 1vh;
-    border-bottom: black 1px solid;
     width: 100vw;
     align-content: center;
-    padding: 1vh 4vw;
+    padding: 2vh 4vw;
     background-color: white;
     z-index: 2;
 }
 
+body{
+    /*overflow-x: hidden;*/
+}
+
+.wrap-hide{
+    width: 200px;
+    overflow: hidden;
+    font-family: HaimG-condensed, sans-serif;
+    font-size: 15px;
+    height: 40px; /* Example height */
+    white-space: nowrap;
+}
+
+nav-button-div{
+    right: 0;
+    /*width: 16px;*/
+    width: 30%;
+    /*justify-content: center;*/
+}
+
 .nav-button{
+    right: 0;
+    width: 16px;
     display: flex;
     flex-direction: column;
-    gap: 4px;
-    width: 16px;
-    justify-content: center;
+    gap: 5px;
+    height: 14px;
+    justify-content: space-between;
 }
 
 .nav-rec{
@@ -82,44 +102,57 @@ a { /* No blue links! */
 .bezalel-logo{
     width: min(10vw, 42px);
     height: auto;
+    margin: auto;
 }
 
 .bezalel-type{
     display: flex;
     align-items: center;
     gap: 16px;
+    margin: auto;
+    position: absolute;
+    align-content: center;
+    left: 50%;
+    /*transform: translateX(-50%);*/
+    /*width: 35%;*/
 }
 
-.bezalel-type p{
-    font-family: HaimG-condensed, sans-serif;
-    font-size: 15px;
-}
+/*.bezalel-type p{*/
+/*    font-family: HaimG-condensed, sans-serif;*/
+/*    font-size: 15px;*/
+/*}*/
 
 .nav-div{
+    left: 0;
     display: inline-flex;
     align-items: baseline;
     /*justify-content: center;*/
     gap: 10px;
     /*position: fixed;*/
     top: 0;
-
+    /*width: 30%;*/
     /*background-color: #f0f0f0;*/
     padding: 10px;
     /*overflow: hidden;*/
     text-wrap: nowrap;
 }
 
+#current-section{
+    overflow: hidden;
+}
+
 .current-section-div{
 
     position: relative;
     /*overflow-y: hidden;*/
-    overflow-x: visible;
+    /*overflow-x: hidden;*/
     text-wrap: nowrap;
-    width: 20vw;
+    width: min(20vw,200px) ;
+    left: 0;
 }
 
 #sections-dropdown {
-    /*display: none;*/
+    display: none;
     left: 0;
     position: absolute;
     top:  100%;
@@ -147,11 +180,9 @@ a { /* No blue links! */
 
 section {
     /*padding: 100px 20px;*/
-    border: 1px solid #ccc;
+    /*border: 1px solid #ccc;*/
     /*margin: 20px 0;*/
 }
-
-
 
 
 
@@ -173,17 +204,18 @@ h1, h2{
 
 h1{
     margin-top: 12vh;
-    font-size: 20vw;
+    font-size: 16vw;
 }
 
 h2{
-    font-size: 32px;
+    font-size: min(32px, 5vw);
+    text-align: center;
 }
 
 h4{
     font-family: "Frank Ruhl Libre", serif;
     font-weight: 300;
-    font-size: 16px;
+    font-size: min(16px,3vw);
     margin-top: 1vh;
 }
 
@@ -299,4 +331,28 @@ h3.assay-author {
 
 .content-1 h4{
     font-size: min(32px, 4vw);
+}
+#completion-percentage {
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+#sliding-window {
+    position: fixed;
+    top: 0;
+    right: -300px; /* Start off-screen */
+    width: 300px; /* Adjust as needed */
+    height: 100%;
+    background-color: #fff; /* Background color */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease; /* Smooth transition */
+    z-index: 1000;
+}
+
+#sliding-window.visible {
+    right: 0; /* Slide in */
+}
+
+.hidden {
+    display: none;
 }
