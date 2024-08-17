@@ -58,13 +58,17 @@ a { /* No blue links! */
     font-size: 16px;
     width: 100vw;
     align-content: center;
-    padding: 2vh 4vw;
+    padding: 2vh 1vw;
     background-color: white;
     z-index: 2;
+    border-bottom: black 1px solid;
 }
 
 body{
-    /*overflow-x: hidden;*/
+    overflow-x: hidden;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
 }
 
 .wrap-hide{
@@ -76,27 +80,89 @@ body{
     white-space: nowrap;
 }
 
-nav-button-div{
+.logotype-bezalel{
     right: 0;
     /*width: 16px;*/
     width: 30%;
+    /*height: 100vh;*/
     /*justify-content: center;*/
+    /*border: black 1px solid;*/
+    font-family: HaimG-condensed, sans-serif;
+    text-wrap: nowrap;
 }
 
-.nav-button{
+#nav-button-div{
+    position: fixed;
+    right: 0;
+    height: 100vh;
+    border: black 1px solid;
+    width: 52px;
+    z-index: 1;
+    justify-content: center;
+    display: flex;
+    background-color: white;
+    transition: all 0.5s;
+
+}
+
+#nav-button-div.selected{
+    width: 32vw;
+    transition: all 0.5s;
+    z-index: 2;
+    background-color: white;
+    filter: invert(1);
+    justify-content: space-between;
+}
+
+#nav-button{
     right: 0;
     width: 16px;
     display: flex;
     flex-direction: column;
     gap: 5px;
-    height: 14px;
-    justify-content: space-between;
+    /*height: 14px;*/
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+#nav-button.selected{
+    margin-left: 16px;
+}
+
+#menu-div{
+    margin-top: 16vh;
+    display: none;
+}
+
+#menu-div.selected{
+    display: flex;
+    flex-direction: column;
+    margin-right: 24px;
 }
 
 .nav-rec{
     background-color: black;
-    /*width: 16px;*/
-    height: 1px;
+    width: 24px;
+    height: 1.2px;
+}
+
+.this-page{
+    font-size: 32px;
+}
+
+.menu-issues{
+    /*margin-top: 16px;*/
+    font-size: 32px;
+    font-family: didone-inter, serif;
+    line-height: 36px;
+}
+
+.issue-date{
+    font-family: "Frank Ruhl Libre", serif;
+    font-weight: 400;
+    font-size: 18px;
+
 }
 
 .bezalel-logo{
@@ -209,7 +275,7 @@ h1{
 
 h2{
     font-size: min(32px, 5vw);
-    text-align: center;
+    /*text-align: center;*/
 }
 
 h4{
@@ -335,24 +401,4 @@ h3.assay-author {
 #completion-percentage {
     margin-left: 10px;
     font-weight: bold;
-}
-
-#sliding-window {
-    position: fixed;
-    top: 0;
-    right: -300px; /* Start off-screen */
-    width: 300px; /* Adjust as needed */
-    height: 100%;
-    background-color: #fff; /* Background color */
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-    transition: right 0.3s ease; /* Smooth transition */
-    z-index: 1000;
-}
-
-#sliding-window.visible {
-    right: 0; /* Slide in */
-}
-
-.hidden {
-    display: none;
 }
